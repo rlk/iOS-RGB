@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="RGBViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-nc-G3M">
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="2" eventType="valueChanged" id="yVc-su-qKp"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xPy-OP-8cZ">
+                                <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="2" eventType="valueChanged" id="FRd-80-CXT"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zPb-kn-zNt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="ifn-6b-A8b"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="updateColor:" destination="2" eventType="valueChanged" id="Cfp-wK-At5"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Blue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2o-eB-vNP">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xuk-xb-fSO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Red" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d0-23-Bor">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="PW2-8Q-Nws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFV-VZ-n5X">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Hs-Qs-WME">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="NSP-j5-lVI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="Gxv-dR-b8r"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-rH-RHw">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="z8Q-qw-oRx"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9o-V7-Bl1">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="ehO-rb-HR3"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3Tc-rH-RHw" firstAttribute="trailing" secondItem="ZFV-VZ-n5X" secondAttribute="trailing" type="default" id="1Us-2Y-ZmP"/>
+                            <constraint firstItem="hdr-nc-G3M" firstAttribute="centerX" secondItem="ZFV-VZ-n5X" secondAttribute="centerX" type="default" id="7Ww-fl-ouo"/>
+                            <constraint firstItem="xPy-OP-8cZ" firstAttribute="top" secondItem="Xuk-xb-fSO" secondAttribute="top" type="default" id="Fj4-f4-ZQh"/>
+                            <constraint firstItem="xPy-OP-8cZ" firstAttribute="centerY" secondItem="G9o-V7-Bl1" secondAttribute="centerY" type="default" id="GfO-8O-9Ex"/>
+                            <constraint firstItem="hdr-nc-G3M" firstAttribute="centerY" secondItem="3Tc-rH-RHw" secondAttribute="centerY" type="default" id="HLh-Ae-bHV"/>
+                            <constraint firstItem="7Hs-Qs-WME" firstAttribute="trailing" secondItem="G9o-V7-Bl1" secondAttribute="trailing" type="default" id="HTh-9b-GND"/>
+                            <constraint firstItem="zPb-kn-zNt" firstAttribute="leading" secondItem="xPy-OP-8cZ" secondAttribute="leading" type="default" id="KmP-4r-GV1"/>
+                            <constraint firstItem="G9o-V7-Bl1" firstAttribute="leading" secondItem="7Hs-Qs-WME" secondAttribute="leading" type="default" id="LEX-lk-ZKv"/>
+                            <constraint firstItem="4d0-23-Bor" firstAttribute="top" secondItem="zPb-kn-zNt" secondAttribute="top" type="default" id="MPa-Dg-EJa"/>
+                            <constraint firstItem="3Tc-rH-RHw" firstAttribute="trailing" secondItem="G9o-V7-Bl1" secondAttribute="trailing" type="default" id="Pm9-ah-RLB"/>
+                            <constraint firstItem="zPb-kn-zNt" firstAttribute="leading" secondItem="4d0-23-Bor" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="PqK-SN-v4J"/>
+                            <constraint firstItem="G9o-V7-Bl1" firstAttribute="top" secondItem="7Hs-Qs-WME" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="S1L-o0-Fqs"/>
+                            <constraint firstItem="ZFV-VZ-n5X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WOz-3u-P2a"/>
+                            <constraint firstItem="hdr-nc-G3M" firstAttribute="top" secondItem="P2o-eB-vNP" secondAttribute="top" type="default" id="Xdc-Io-YK7"/>
+                            <constraint firstItem="4d0-23-Bor" firstAttribute="leading" secondItem="P2o-eB-vNP" secondAttribute="leading" type="default" id="ZIc-6Q-hGP"/>
+                            <constraint firstItem="7Hs-Qs-WME" firstAttribute="leading" secondItem="zPb-kn-zNt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dQa-VP-eUl"/>
+                            <constraint firstItem="7Hs-Qs-WME" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ewp-08-EYF"/>
+                            <constraint firstItem="G9o-V7-Bl1" firstAttribute="leading" secondItem="xPy-OP-8cZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fQU-PW-xTh"/>
+                            <constraint firstItem="xPy-OP-8cZ" firstAttribute="leading" secondItem="hdr-nc-G3M" secondAttribute="leading" type="default" id="fn9-8x-o5x"/>
+                            <constraint firstItem="ZFV-VZ-n5X" firstAttribute="top" secondItem="3Tc-rH-RHw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iFK-fV-uYV"/>
+                            <constraint firstItem="Xuk-xb-fSO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mDn-c0-QIF"/>
+                            <constraint firstAttribute="bottom" secondItem="ZFV-VZ-n5X" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="met-oF-5Ke"/>
+                            <constraint firstItem="hdr-nc-G3M" firstAttribute="leading" secondItem="P2o-eB-vNP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nwj-i3-aWp"/>
+                            <constraint firstItem="3Tc-rH-RHw" firstAttribute="leading" secondItem="hdr-nc-G3M" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oAt-uM-FKt"/>
+                            <constraint firstItem="3Tc-rH-RHw" firstAttribute="top" secondItem="G9o-V7-Bl1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rCt-Vt-f4N"/>
+                            <constraint firstItem="zPb-kn-zNt" firstAttribute="centerY" secondItem="7Hs-Qs-WME" secondAttribute="centerY" type="default" id="t88-Jq-YVo"/>
+                            <constraint firstItem="3Tc-rH-RHw" firstAttribute="leading" secondItem="G9o-V7-Bl1" secondAttribute="leading" type="default" id="yGj-Gk-yXk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bSlider" destination="hdr-nc-G3M" id="Dj3-17-UEE"/>
+                        <outlet property="bTextField" destination="3Tc-rH-RHw" id="YHU-Fc-GZc"/>
+                        <outlet property="colorView" destination="ZFV-VZ-n5X" id="U1B-pa-WJu"/>
+                        <outlet property="gSlider" destination="xPy-OP-8cZ" id="YGu-5n-sEg"/>
+                        <outlet property="gTextField" destination="G9o-V7-Bl1" id="BUr-U2-dFx"/>
+                        <outlet property="rSlider" destination="zPb-kn-zNt" id="Rm3-cn-Ope"/>
+                        <outlet property="rTextField" destination="7Hs-Qs-WME" id="xL9-ZZ-w02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RGBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RGBViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="updateColor:"/>
+                <relationship kind="outlet" name="bSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="bTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="colorView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="gTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="rSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="rTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
